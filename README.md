@@ -11,8 +11,7 @@
 #### En una lotería en la que el apostador, elije 6 números sin repetición, con valores entre 1 y 43 y una super balota que es un numero entre 1 y 16. La idea es acertar los seis números y la super balota. En el juego real solo se elijen cinco números, pero en esta práctica elegiremos seis.
 # 
     3 La aplicación a desarrollar.
-### 
-    Cuando se abra el archivo de Excel de nombre miPracticaBaloto.xlsm debe aparecer el siguiente formulario:
+### Cuando se abra el archivo de Excel de nombre miPracticaBaloto.xlsm debe aparecer el siguiente formulario:
 ![image](https://github.com/user-attachments/assets/b8cc0562-188d-4732-a2d6-509c4130e0ce)
 
 ####  En este formulario, cuando se carga los comboBox contienen los números del 1 al 43 y el combo de la balota del 1 al 16. Cuando la ventana aparece los combos muestran unos valores sugeridos en cada uno de ellos, que la aplicación define de manera aleatoria. En esta ventana el apostador elije sus los números a los que les va a apostar, eligiendo de cada comboBox, cuando se presiona el botón Jugar, la apuesta se registra en la hoja de Excel, como muestra la siguiente imagen, siempre y cuando no se hayan elegido números repetidos.
