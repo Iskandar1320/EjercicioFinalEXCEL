@@ -1,6 +1,7 @@
 # EjercicioFinalEXCEL.
-## Enunciado
-##  1 Objetivo
+### Enunciado
+## 
+    1 Objetivo
   ### Evidenciar las competencias para usar las características básica del lenguaje VBA para automatizar aplicaciones.  Desarrollar buenas prácticas de programación.
    ## 
     1.1 ¿Qué se Entrega?:
