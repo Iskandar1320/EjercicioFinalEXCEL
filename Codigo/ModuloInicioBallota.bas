@@ -82,7 +82,7 @@ End Sub
 
 Public Sub SugerirNumeroBalotaGanador(frm As UserForm)
     Dim numeroAleatorio As Integer
-    numeroAleatorio = Int((16 - 1 + 1) * Rnd + 1) ' Genera un número entre 1 y 16
+    numeroAleatorio = Int((16 - 1 + 1) * Rnd + 1) ' Genera un numero entre 1 y 16
     frm.TextBox7.Value = numeroAleatorio
 
 End Sub
@@ -111,14 +111,48 @@ End Sub
 Public Sub ValidarYGuardarDatos(frm As UserForm)
     ' Llama a la subrutina que verifica números únicos
     If VerificarNumerosUnicos(frm) Then
-        ' Si todos los números son únicos, procede a guardar
+        ' Si todos los numeros son únicos, procede a guardar
         GuardarDatos frm
-        MsgBox "¡Los números son validos y se han guardado correctamente!", vbInformation
+        MsgBox "¡Los numeros son validos y se han guardado correctamente!", vbInformation
     Else
         ' Si hay números repetidos, muestra un mensaje y no guarda
         MsgBox "Hay que volver a jugar, cambia los numeros.", vbExclamation
     End If
 End Sub
+Public Sub ValidarDatosNumerosGanadores(frm As UserForm)
+If VerificarNumerosUnicosGanadores(frm) Then
+        BuscarGanadores frm
+    MsgBox "¡Los numeros ganadores son validos, no hay repetidos "
+    Else
+        ' Si hay números repetidos, muestra un mensaje y no guarda
+        MsgBox "Hay que volver a jugar, cambia los numeros.", vbExclamation
+    End If
+End Sub
+' Verificar si los números son únicos del formGanador
+Public Function VerificarNumerosUnicosGanadores(frm As UserForm) As Boolean
+    Dim numeros(1 To 6) As Variant
+    Dim i As Integer, j As Integer
+    
+    ' Almacena los valores de los ComboBox en un array
+    numeros(1) = frm.TextBox1.Value
+    numeros(2) = frm.TextBox2.Value
+    numeros(3) = frm.TextBox3.Value
+    numeros(4) = frm.TextBox4.Value
+    numeros(5) = frm.TextBox5.Value
+    numeros(6) = frm.TextBox6.Value
+
+    ' Verifica que no haya números repetidos en el array
+    For i = 1 To 6
+        For j = i + 1 To 6
+            If numeros(i) = numeros(j) Then
+                VerificarNumerosUnicosGanadores = False ' Hay numeros repetidos
+                Exit Function
+            End If
+        Next j
+    Next i
+
+    VerificarNumerosUnicosGanadores = True ' Todos los numeros son únicos
+End Function
 
 ' Verificar si los números son únicos
 Public Function VerificarNumerosUnicos(frm As UserForm) As Boolean
@@ -137,13 +171,13 @@ Public Function VerificarNumerosUnicos(frm As UserForm) As Boolean
     For i = 1 To 6
         For j = i + 1 To 6
             If numeros(i) = numeros(j) Then
-                VerificarNumerosUnicos = False ' Hay números repetidos
+                VerificarNumerosUnicos = False ' Hay numeros repetidos
                 Exit Function
             End If
         Next j
     Next i
 
-    VerificarNumerosUnicos = True ' Todos los números son únicos
+    VerificarNumerosUnicos = True ' Todos los numeros son únicos
 End Function
 
 Public Sub BuscarGanadores(frm As UserForm)
