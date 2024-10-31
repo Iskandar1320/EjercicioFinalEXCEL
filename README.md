@@ -16,4 +16,4 @@
 # 
     3 La aplicación a desarrollar.
 ### Cuando se abra el archivo de Excel de nombre miPracticaBaloto.xlsm debe aparecer el siguiente formulario:
-    ![image](https://github.com/user-attachments/assets/b8cc0562-188d-4732-a2d6-509c4130e0ce)
+![image](https://github.com/user-attachments/assets/b8cc0562-188d-4732-a2d6-509c4130e0ce)
